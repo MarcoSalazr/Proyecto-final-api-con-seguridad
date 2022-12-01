@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+
+<body style="text-align:center ;">
+    <div id="inicio" style="display:block;">
+        <form style="padding: 10px; ;">
+            <br><label for="user">Usuario</label><br>
+            <input type="text" id="user" placeholder="Introduzca su nombre de Usuario"><br><br>
+            <label for="passwords">Contraseña</label><br>
+            <input type="text" id="passwords" placeholder="Introduzca su contraseña"><br><br>
+            <button type="reset">Cancelar</button>
+            <button id="autbtns" type="button">Iniciar sesion</button>
+        </form>
+        <div id="detalleslog"></div>
+    </div>
+    <div id="accedio" style="display:none;">
+        <form style="padding: 10px; ;">
+            <br><br>
+            <h3>Clientes</h3>
+            <button type="button" id="menuclient">Menu</button>
+            <div id="client" style="display:none ; padding: 10px; background-color: bisque;">
+                <br>
+                <h5>Agregar clientes</h5>
+                <label for="nameclient">Nombre</label><br>
+                <input type="text" id="nameclient" placeholder="Introduzca nombre"><br>
+                <label for="celclient">Celular</label><br>
+                <input type="text" id="celclient" placeholder="Introduzca celular"><br>
+                <label for="mailclient">E-Mail</label><br>
+                <input type="text" id="mailclient" placeholder="Introduzca mail"><br>
+                <button type="button" id="addclient">Enviar info</button>
+                <br><br>
+                <h5>Borrar clientes</h5>
+                <label for="delclient">Cliente a eliminar</label><br>
+                <input type="text" id="delclient" placeholder=" Id de cliente a eliminar"><br>
+                <button type="button" id="delclientbtn">Eliminar</button> <br><br>
+                <h5>Listar clientes</h5>
+                <button type="button" id="listclient">Listar</button><br>
+                <div id="detailclients"></div>
+            </div>
+
+            <br><br>
+            <h3>Productos</h3>
+            <button type="button" id="menuprocuct">Menu</button>
+            <div id="product" style="display:none ; padding: 10px; background-color: lightblue;">
+                <br>
+                <h5>Agregar productos</h5>
+                <label for="codproduct">Nombre</label><br>
+                <input type="text" id="codproduct" placeholder="Introduzca codigo"><br>
+                <label for="nameproduct">Nombre de producto</label><br>
+                <input type="text" id="nameproduct" placeholder="Introduzca producto"><br>
+                <label for="cantidadproduct">Cantidad de producto</label><br>
+                <input type="number" id="cantidadproduct" placeholder="Introduzca cantidad"><br>
+                <button type="button" id="addproduct">Enviar info</button>
+                <br><br>
+                <h5>Borrar productos</h5>
+                <label for="delproduct">Producto a eliminar</label><br>
+                <input type="text" id="delproduct" placeholder=" Id de producto a eliminar"><br>
+                <button type="button" id="delproductbtn">Eliminar</button><br>
+                <h5>Listar productos</h5>
+                <button type="button" id="listproduct">Listar</button>
+            </div>
+            <div id="detallesp"></div>
+            <br><br>
+            <h3>Empleados</h3>
+            <button type="button" id="menuempledos">Menu</button>
+            <div id="empleados" style="display:none ; background-color: lightgreen; padding: 10px;">
+                <h5>Agregar empleados</h5>
+                <label for="nameempleado">Nombre</label><br>
+                <input type="text" id="nameempleado" placeholder="Introduzca nombre"><br>
+                <label for="celempleado">Celular</label><br>
+                <input type="text" id="celempleado" placeholder="Introduzca celular"><br>
+                <label for="mailempleado">E-Mail</label><br>
+                <input type="text" id="mailempleado" placeholder="Introduzca mail"><br>
+                <label for="cargo">Cargo</label><br>
+                <input type="text" id="cargo" placeholder="Introduzca Cargo"><br>
+                <label for="sueldo">sueldo</label><br>
+                <input type="text" id="sueldo" placeholder="Introduzca sueldo"><br>
+                <button type="button" id="addempleado">Enviar info</button>
+                <br><br>
+                <h5>Borrar empleados</h5>
+                <label for="delempleado">Empleado a eliminar</label><br>
+                <input type="text" id="delempleado" placeholder=" Id de empleado a eliminar"><br>
+                <button type="button" id="delempleadobtn">Eliminar</button><br>
+                <h5>Listar empleados</h5>
+                <button type="button" id="listempleados">Listar</button>
+            </div>
+            <div id="detallesempleados"></div>
+            <br><br>
+            <h3>Facturas</h3>
+            <button type="button" id="menufacturas">Menu</button>
+            <div id="facturasg" style="display:none ; background-color: lightgrey; padding: 10px;">
+                <h5>Agregar factura</h5>
+                <label for="idcliente">Id de cliente a facturar</label><br>
+                <input type="text" id="idcliente" placeholder="Introduzca id"><br><br>
+                <label for="idempleado">Id del vendedor</label><br>
+                <input type="text" id="idempleado" placeholder=" Id de empleado a eliminar"><br><br>
+                <label for="precio">Empleado a eliminar</label><br>
+                <input type="text" id="precio" placeholder=" Id de empleado a eliminar"><br><br>
+                <label for="numproductos">Numero de productos</label><br>
+                <input type="text" id="numproductos" placeholder="Numero de productos de la factura"><br><br>
+                <button id="mproductos">Agregar productos</button>
+                <div id='nproductos'></div>
+                <button id="addfacture">Enviar info</button>
+                <br><br>
+
+                <h5>Listar facturas</h5>
+                <button type="button" id="listfactures">Listar</button><br><br>
+
+                <p>Eliminar factura</p>
+                <label for="delfactura"></label><br>
+                <input type="text" id="delfactura"><br>
+                <button type="button" id="deletefactura">Eliminar</button>
+                <div id="detallesfacturas"></div>
+            </div>
+
+        </form>
+    </div>
+    <script src="principal.js"></script>
+</body>
+
+</html>
